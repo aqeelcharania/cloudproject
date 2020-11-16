@@ -6,7 +6,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
- return render_template('index.html')
+ return render_template('base2.html')
+
+
+@app.route('/about')
+def about():
+ return render_template('group.html')
 
 #inference
 @app.route('/inference', methods=['POST', 'GET'])
